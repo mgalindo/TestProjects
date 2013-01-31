@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#listItem').focus();
+
+            $('#btnAdd').on('click', function(){
+                        $('#itemsList').append("<li>"+$("#listItem").val()  +"</li>");
+
+                        $('#listItem').focus();
+                    }
+            )
+        });
+    </script>
+</head>
+<body>
+<span>Add item to list</span>
+<input type="text" id="listItem"/>
+<button id="btnAdd">Click me</button>
+<br/>
+<ul id="itemsList"></ul>
+</body>
+</html>
